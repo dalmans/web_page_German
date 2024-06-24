@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take your podcast to the next level</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <header id="header1"> </header>
+
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+    <script src="./script.js"></script>
+
+
+    <script type="text/babel">
+        ReactDOM
+            .createRoot(document.getElementById("header1"))
+            .render(
+                <div id="header_wrapper"><h1>German through texts</h1>
+                    {/* Это комментарий внутри JSX
+                    <form action="" method="get" class="form-entrance">
+                        <div class="form-example">
+                            <label for="name">Login: </label>
+                            <input type="text" name="Teacher" id="name" required />
+                       
+                            <label for="passwort">Passwort: </label>
+                            <input type="passwort" name="passwort" id="passwort" required />
+                       </div>
+                        <div class="form-example">
+                            <input type="submit" value="Enter!" />
+                        </div>  </form>  */}
+                </div>
+
+            );
+    </script>
+
+    <main id="main">
+        <section class="middle_section">
+            <div class="list_of_texts_and_words">
+                <div class="list_of_texts">Texts</div>
+                <div class="list_of_words">Words</div>
+
+            </div>
+            <div class="text_part">
+                <p id="Inputed text">Oscar geht einkaufen in einen großen Supermarkt. Seine Einkaufsliste ist lang, er
+                    kauft für das ganze Wochenende ein.
+                </p>
+                <form class="form" id="form1" onsubmit="handleSubmit(event)"></form>
+               
+                    <p><b>Input the text here:</b></p>
+                    <textarea id="Input" name="Story"> </textarea>
+                   
+                    <button type="submit" onclick="getValue()" ></button>Add text</button>
+                </form>
+               
+            </div>
+            <div class="list_of_words_from_text">
+                there will be Words from the text
+            </div>
+
+
+            <div class="add_new_text">
+
+
+
+            </div>
+        </section>
+     
+    </main>
+
+
+</body>
+
+</html>
