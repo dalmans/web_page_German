@@ -34,6 +34,7 @@
 html {
   box-sizing: border-box;
   padding: 0;
+  background-color: black;
 }
 
 *,
@@ -51,91 +52,43 @@ body {
   display: block;
   display: flex;
   flex-direction: column;
-  max-width: 1440px;
+  max-width: 1256px;
   margin: auto;
 }
 
-/*Header styles start*/
-.wrapper {
-  max-width: 1300px;
-  margin: 0 auto;
-}
 
-
-
-header h1 {
-  font-size: 50px;
-  color: rgb(3, 6, 49);
-}
-
-
-
-.middle_section {
- 
-    display: flex;
-    /* align-items: center;*/
-     
-    height: 1280px;
-    max-width: 1440px;
-    min-width: 100%;
-    background-color: #080808;
-}
-
-.list_of_texts_and_words, .text_part,  .add_new_text{
-  display: block;
-}
-
-.list_of_texts_and_words{
+#header_wrapper {
   display: flex;
   flex-direction: row;
-  background-color: chocolate;
-  width: 300px;
+  max-width: 1256px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
 }
 
-.text_part{
-  margin-left: 50px;
-  background-color: chocolate;
-  width: 740px;
-}
-
-.list_of_words_from_text{
-  margin-left: 50px;
-  background-color: chocolate;
-  width: 300px;
-}
-
-.list_of_texts{
-  background-color: rgb(66, 65, 63);
+header h1 {
   display: block;
-  margin: 5px;
-  height: 30px;
-  flex-grow: 1;
+  font-size: 50px;
+  color: rgb(3, 6, 49);
+  justify-content: flex-start;
+
 }
 
-.list_of_words{
-  background-color: rgb(66, 65, 63);
-  display: block;
-  margin: 5px;
-  flex-grow: 1;
-  height: 30px;
+.head_buttons {
+  display: flex;
+  /* display: block;*/
+  min-height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+
 }
 
-#Input {
-  background-color: rgb(241, 206, 135);
-  display: block;
-  margin: 5px;
-  height: 300px;
-  width: 95%;
-  padding-left: 24px;
-  padding-top: 0;
-    font-size: 15px;
-    justify-content: space-around;
+#main_page,
+#play,
+#settings {
+  align-items: center;
+  justify-content: center;
 }
-
-
-
-
-/*Header styles end*/
 
 .main {
 
@@ -144,58 +97,92 @@ header h1 {
 
 }
 
-/* ///////    First_section styles start //////////*/
-
-.first_section {
+.middle_section {
   display: flex;
   /* align-items: center;*/
-  justify-content: center;
-  height: auto;
+  flex-direction: column;
+  height: 1280px;
   max-width: 1440px;
   min-width: 100%;
+  background-color: #413d3d;
 
 }
 
-.first_section_center {
+#textInput {
+  display: block;
+  background-color: chocolate;
+  max-width: 1256px;
+  height: fit-content;
+  margin: 10px;
+  max-width: 99%;
+  resize: none;
+  height: 500px;
+}
+
+.WordsList{
+  display: flex;
+  justify-content: space-around;
+
+}
+
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: chocolate;
+  color: black ;
+  /*  float: left;*/
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+.sent_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 300px;
+}
+
+#cancel_button,
+#enter_button {
+  display: block;
+  margin: 100px;
+  background-color: chocolate;
+  height: 100px;
   display: flex;
   align-items: center;
-  height: 913px;
-  max-width: 1300px;
-  min-width: 90%;
+  justify-content: center;
+  width: 100px;
+
+}
+#cancel_button:hover,
+#enter_button:hover {
+  background-color: #bbb;
+}
+
+.word_div, .example_div{
+  background-color: bisque;
+  width: 200px;
+  margin: 5px;
+}
+
+.list_of_words{
+  display: flex;
+
 }
 
 
 
 
 
-
-.first_content_text1 {
-  margin-top: 163px;
-  color: #fff;
-  width: 610px;
-  height: 530px;
-  /* background-color: aquamarine;*/
-}
-
-.p_section1 {
-  padding-top: 0px;
-  margin: 0px;
-  color: #fff;
-}
-
-
-
-.listen_on {
-  width: 289px;
-  height: 72px;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 160%;
-  color: #fff;
-  position: absolute;
-  top: 501px;
-  left: 0;
-}
 
 
 
@@ -205,18 +192,7 @@ header h1 {
 /* ///////    Second_section styles start //////////*/
 
 
-.second_section {
-  max-width: 1440px;
-  display: flex;
-  flex-direction: column;
-  height: 2088px;
-}
 
-.latest_episodes,
-.episodes {
-  display: block;
-  margin-left: 70px;
-}
 
 .latest_episodes {
   margin-bottom: 40px;
@@ -278,49 +254,11 @@ header h1 {
 
 /* ///////    Third_section styles start //////////*/
 
-.third_section {
-  max-width: 1440px;
-  min-width: 90%;
-  display: flex;
-  flex-direction: column;
-  height: 1530px;
-
-}
 
 
 
-.jacob_text {
-  display: block;
-  /*background-color: red;*/
-  width: 590px;
-  height: 448px;
-}
 
-.meet_your_host {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 150%;
-  color: #118da8;
-  margin-top: 20px;
-}
 
-.jacob_paulaner_text {
-
-  font-weight: 400;
-  font-size: 65px;
-  line-height: 122%;
-  letter-spacing: 0.04em;
-  color: #fff;
-  margin-bottom: 28px;
-}
-
-.simple_text {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 150%;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 33px;
-}
 
 
 .subscribe {

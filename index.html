@@ -26,18 +26,14 @@
             .createRoot(document.getElementById("header1"))
             .render(
                 <div id="header_wrapper"><h1>German through texts</h1>
-                    {/* Это комментарий внутри JSX
-                    <form action="" method="get" class="form-entrance">
-                        <div class="form-example">
-                            <label for="name">Login: </label>
-                            <input type="text" name="Teacher" id="name" required />
-                       
-                            <label for="passwort">Passwort: </label>
-                            <input type="passwort" name="passwort" id="passwort" required />
-                       </div>
-                        <div class="form-example">
-                            <input type="submit" value="Enter!" />
-                        </div>  </form>  */}
+                 
+            <div class = "head_buttons">
+                <button id = "main_page" > Main page</button>
+                <button id = "play" > Game</button>
+                <button id = "settings" > Settings</button>
+                            
+                </div>
+                      
                 </div>
 
             );
@@ -45,34 +41,30 @@
 
     <main id="main">
         <section class="middle_section">
-            <div class="list_of_texts_and_words">
-                <div class="list_of_texts">Texts</div>
-                <div class="list_of_words">Words</div>
+            <label for="name"  >Enter a Text:</label>
 
-            </div>
-            <div class="text_part">
-                <p id="Inputed text">Oscar geht einkaufen in einen großen Supermarkt. Seine Einkaufsliste ist lang, er
-                    kauft für das ganze Wochenende ein.
-                </p>
-                <form class="form" id="form1" onsubmit="handleSubmit(event)"></form>
+            <textarea  type="text" id="textInput" wrap="soft"
+             > </textarea>
+              
+          <div class="wordInputsection">
+            <div id="inputWord" class="WordsList">
+                <h2 style="margin:5px">Add new words</h2>
+                <input type="text" id="myInputWord" placeholder="Word...">
+                <input type="text" id="myInputTranslation" placeholder="Transletion...">
+               <textarea type="text" id="myInputExtraInform" placeholder="Example..."> </textarea>
+                <span onclick="newElement()" class="addBtn">Add</span>
+              </div>
+              
+              <ul id="list_of_words">
                
-                    <p><b>Input the text here:</b></p>
-                    <textarea id="Input" name="Story"> </textarea>
-                   
-                    <button type="submit" onclick="getValue()" ></button>Add text</button>
-                </form>
-               
-            </div>
-            <div class="list_of_words_from_text">
-                there will be Words from the text
-            </div>
+                
+              </ul>
+              
+          </div>
+          <div class="sent_buttons" > 
+            <div id="cancel_button" class="addBtn">Cancel</div>
+        <div id="enter_button" class="addBtn">Enter</div>          </div>
 
-
-            <div class="add_new_text">
-
-
-
-            </div>
         </section>
      
     </main>
