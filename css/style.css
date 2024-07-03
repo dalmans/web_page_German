@@ -152,7 +152,7 @@ header h1 {
 }
 
 #cancel_button,
-#enter_button {
+#save_button {
   display: block;
   margin: 100px;
   background-color: chocolate;

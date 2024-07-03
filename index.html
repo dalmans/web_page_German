@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Take your podcast to the next level</title>
+    <title>German through texts</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  
+
     <script src="./script.js"></script>
 
 
@@ -26,14 +26,14 @@
             .createRoot(document.getElementById("header1"))
             .render(
                 <div id="header_wrapper"><h1>German through texts</h1>
-                 
-            <div class = "head_buttons">
-                <button id = "main_page" > Main page</button>
-                <button id = "play" > Game</button>
-                <button id = "settings" > Settings</button>
-                            
-                </div>
-                      
+
+                    <div class="head_buttons">
+                        <button id="main_page" > Main page</button>
+                        <button id="play" > Game</button>
+                        <button id="settings" > Settings</button>
+
+                    </div>
+
                 </div>
 
             );
@@ -41,32 +41,35 @@
 
     <main id="main">
         <section class="middle_section">
-            <label for="name"  >Enter a Text:</label>
+            <label for="name">Enter Title:</label>
 
-            <textarea  type="text" id="textInput" wrap="soft"
-             > </textarea>
-              
-          <div class="wordInputsection">
-            <div id="inputWord" class="WordsList">
-                <h2 style="margin:5px">Add new words</h2>
-                <input type="text" id="myInputWord" placeholder="Word...">
-                <input type="text" id="myInputTranslation" placeholder="Transletion...">
-               <textarea type="text" id="myInputExtraInform" placeholder="Example..."> </textarea>
-                <span onclick="newElement()" class="addBtn">Add</span>
-              </div>
-              
-              <ul id="list_of_words">
-               
-                
-              </ul>
-              
-          </div>
-          <div class="sent_buttons" > 
-            <div id="cancel_button" class="addBtn">Cancel</div>
-        <div id="enter_button" class="addBtn">Enter</div>          </div>
+            <input type="text" id="enterTitle" placeholder="Title">
+            <label for="name">Enter a Text:</label>
+
+            <textarea type="text" id="textInput" wrap="soft"> </textarea>
+
+            <div class="wordInputsection">
+                <div id="inputWord" class="WordsList">
+                    <h2 style="margin:5px">Add new words</h2>
+                    <input type="text" id="myInputWord" placeholder="Word...">
+                    <input type="text" id="myInputTranslation" placeholder="Transletion...">
+                    <textarea type="text" id="myInputExtraInform" placeholder="Example..."> </textarea>
+                    <span onclick="newElement()" class="addBtn">Add</span>
+                </div>
+
+                <ul id="list_of_words">
+
+
+                </ul>
+
+            </div>
+            <div class="sent_buttons">
+                <div id="cancel_button" class="addBtn">Cancel</div>
+                <div id="save_button" onclick="newJason()" class="addBtn"> Save</div>
+            </div>
 
         </section>
-     
+
     </main>
 
 
