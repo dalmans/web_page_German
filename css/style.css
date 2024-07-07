@@ -31,10 +31,13 @@
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+
+
 html {
   box-sizing: border-box;
   padding: 0;
-  background-color: black;
+  /* background-color: black;*/
+  /*font-family: 'DM Sans', sans-serif;*/
 }
 
 *,
@@ -46,14 +49,16 @@ html {
 body {
   font-family: 'DM Sans', sans-serif;
   font-style: normal;
-  background-color: hsl(29, 95%, 48%);
+  /* background-color: rgb(3, 18, 29);*/
   line-height: 1.2;
+  /*Значение 1.2 означает, что высота строки будет равна 1.2 умноженной на текущий размер шрифта. Это относительное значение.*/
   font-weight: normal;
   display: block;
   display: flex;
   flex-direction: column;
   max-width: 1256px;
   margin: auto;
+
 }
 
 
@@ -63,24 +68,47 @@ body {
   max-width: 1256px;
   flex-wrap: wrap;
   justify-content: space-between;
+  /* align-items: center;*/
+  width: 100%;
+  background-color: #1f2427;
+  padding: 20px;
 
 }
 
+
 header h1 {
   display: block;
-  font-size: 50px;
-  color: rgb(3, 6, 49);
+  font-size: 45px;
+  color: rgb(202, 204, 235);
   justify-content: flex-start;
+  gap: 10px;
 
 }
 
 .head_buttons {
   display: flex;
-  /* display: block;*/
   min-height: 100%;
   justify-content: flex-end;
   align-items: center;
 
+}
+
+.head_buttons button {
+  padding: 10px 20px;
+  background-color: rgba(152, 153, 80, 0.836);
+
+  border-bottom: #000;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 20px;
+  color: rgb(3, 6, 49);
+  width: 150px;
+}
+
+.head_buttons button:hover {
+  background-color: #ddd;
 }
 
 #main_page,
@@ -88,12 +116,14 @@ header h1 {
 #settings {
   align-items: center;
   justify-content: center;
+
 }
 
-.main {
+#main {
 
   /* margin-top: 119px;*/
   display: block;
+  background-color: #454e53;
 
 }
 
@@ -102,24 +132,74 @@ header h1 {
   /* align-items: center;*/
   flex-direction: column;
   height: 1280px;
-  max-width: 1440px;
   min-width: 100%;
-  background-color: #413d3d;
+  /* background-color: #010813be;*/
+ padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+  width: 100%;
+  max-width: 800px;
+  margin: 20px 0;
 
+}
+
+#enterTitle {
+  background-color: #f8e8dc;
+  width: 1216px;
+  height: 50px;
+
+}
+
+.label_text {
+  font-size: 25px;
+  color: rgb(179, 181, 197);
+}
+
+.middle_section label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.middle_section input[type="text"],
+.middle_section textarea {
+ /* max-width: 1216px;*/
+ /* padding: 10px;*/
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 #textInput {
   display: block;
-  background-color: chocolate;
-  max-width: 1256px;
-  height: fit-content;
-  margin: 10px;
-  max-width: 99%;
+  background-color: #f8e8dc;
+  max-width: 1216px;
+   max-width: 99%;
   resize: none;
-  height: 500px;
+  height: 150px;
+
 }
 
-.WordsList{
+.wordInputsection {
+  margin-top: 20px;
+
+}
+
+.wordInputsection h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.WordsList input[type="text"],
+.WordsList textarea {
+  margin-bottom: 10px;
+  background-color: #f8e8dc;
+
+}
+
+
+.WordsList {
   display: flex;
   justify-content: space-around;
 
@@ -130,32 +210,59 @@ header h1 {
 .addBtn {
   padding: 10px;
   width: 25%;
-  background: chocolate;
-  color: black ;
+
+
+  background-color: rgba(152, 153, 80, 0.836);
   /*  float: left;*/
   text-align: center;
-  font-size: 16px;
-  cursor: pointer;
+
   transition: 0.3s;
   border-radius: 0;
+  font-size: 20px;
+  color: rgb(3, 6, 49);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
+.close button {
+  background-color: rgba(152, 153, 80, 0.836);
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+
+}
+
+.close  {
+  background-color: rgba(152, 153, 80, 0.836);
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+
 .addBtn:hover {
-  background-color: #bbb;
+  background-color: #ddd;
 }
 
 .sent_buttons {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  height: 300px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.sent_buttons .addBtn {
+  width: 48%;
 }
 
 #cancel_button,
 #save_button {
   display: block;
   margin: 100px;
-  background-color: chocolate;
+  background-color: rgba(152, 153, 80, 0.836);
   height: 100px;
   display: flex;
   align-items: center;
@@ -163,18 +270,22 @@ header h1 {
   width: 100px;
 
 }
+
 #cancel_button:hover,
-#enter_button:hover {
-  background-color: #bbb;
+#save_button:hover {
+  background-color: #ddd;
 }
 
-.word_div, .example_div{
-  background-color: bisque;
+.word_div,
+.example_div {
+  background-color: #f8e8dc;
   width: 200px;
   margin: 5px;
+  border: none;
+  border-radius: 5px;
 }
 
-.list_of_words{
+.list_of_words {
   display: flex;
 
 }
@@ -249,10 +360,6 @@ header h1 {
 
 
 
-/* ///////    Second_section styles ended //////////*/
-
-
-/* ///////    Third_section styles start //////////*/
 
 
 
@@ -362,31 +469,6 @@ header h1 {
 
 
 
-
-.review div:first-of-type {
-  margin-left: 50px;
-  margin-top: 21px;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 120%;
-  color: #fff;
-}
-
-.review div:nth-of-type(2) {
-  /* Стили для второго div в контейнере */
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 120%;
-  color: rgba(255, 255, 255, 0.7);
-  margin-left: 50px;
-  margin-top: 19px;
-}
-
-.parent_review_block .review:nth-of-type(5) div:nth-of-type(1) {
-  font-size: 35px;
-  line-height: 123%;
-
-}
 
 /* ///////    Forth_section styles ended //////////*/
 
